@@ -1,18 +1,15 @@
+const barras = document.querySelectorAll(".progresso")
 
-// animação simples ao clicar no menu
+function animarSkills(){
 
-document.querySelectorAll("nav a").forEach(link => {
+barras.forEach(barra => {
 
-    link.addEventListener("click", function(e){
+const largura = barra.getAttribute("data-width")
 
-        e.preventDefault()
-
-        const id = this.getAttribute("href")
-
-        document.querySelector(id).scrollIntoView({
-            behavior:"smooth"
-        })
-
-    })
+barra.style.width = largura
 
 })
+
+}
+
+window.addEventListener("load", animarSkills)
