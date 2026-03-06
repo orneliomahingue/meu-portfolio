@@ -1,15 +1,51 @@
-const barras = document.querySelectorAll(".progresso")
+console.log("Portfólio carregado com sucesso");
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
 
-function animarSkills(){
+    size: { value: 3 },
 
-barras.forEach(barra => {
+    color: { value: "#ffffff" },
 
-const largura = barra.getAttribute("data-width")
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+    },
 
-barra.style.width = largura
+    move: {
+      enable: true,
+      speed: 2,
+    },
+  },
+});
 
-})
+const ctx = document.getElementById("skillsChart");
 
-}
+new Chart(ctx, {
+  type: "bar",
 
-window.addEventListener("load", animarSkills)
+  data: {
+    labels: ["PHP", "Laravel", "JavaScript", "HTML", "CSS", "MySQL"],
+
+    datasets: [
+      {
+        label: "Nível de habilidade",
+
+        data: [90, 85, 75, 85, 80, 80],
+
+        borderWidth: 1,
+      },
+    ],
+  },
+
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100,
+      },
+    },
+  },
+});
