@@ -1,1 +1,64 @@
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f4f4f4;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+nav{
+    background:#333;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#0d6efd;
+}
+
+section{
+    padding:40px;
+    max-width:900px;
+    margin:auto;
+}
+
+.projeto{
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+ul li{
+    background:white;
+    margin:10px 0;
+    padding:10px;
+    border-radius:5px;
+}
+
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
