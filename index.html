@@ -1,112 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-<meta charset="UTF-8">
-<title>Ornelio Mahingue | Developer</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
 
-<body>
+    <title>Ornelio Mahingue | Developer</title>
 
-<header class="hero">
+    <link rel="stylesheet" href="style.css" />
 
-<img src="https://i.pravatar.cc/200" class="perfil">
+    <!-- icones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
 
-<h1>Ornelio Mahingue</h1>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Ornelio.dev</div>
 
-<p>Desenvolvedor Web | PHP | Laravel | JavaScript</p>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
 
-<a href="#projetos" class="btn">Ver Projetos</a>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
 
-</header>
+    <div id="particles-js"></div>
 
+    <header class="hero">
+      <img src="img/perfil.png" class="perfil" />
+      <h1>Ornelio Mahingue</h1>
+      <p>Desenvolvedor Web | PHP | Laravel | JavaScript</p>
+      <div class="botoes">
+        <a href="https://github.com/seuusuario" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/seuusuario" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="cv.pdf" download>
+          <i class="fa-solid fa-download"></i> Baixar CV
+        </a>
+      </div>
+    </header>
 
-<section class="sobre">
+    <section class="skills">
+      <h2>Tecnologias</h2>
 
-<h2>Sobre Mim</h2>
+      <div class="tech-grid">
+        <div class="tech">
+          <i class="fa-brands fa-php"></i>
+          <p>PHP</p>
+        </div>
 
-<p>
-Sou desenvolvedor web especializado em criação de sistemas de gestão
-utilizando PHP e Laravel. Tenho experiência em sistemas financeiros,
-controlo de stock e plataformas institucionais.
-</p>
+        <div class="tech">
+          <i class="fa-brands fa-laravel"></i>
+          <p>Laravel</p>
+        </div>
 
-</section>
+        <div class="tech">
+          <i class="fa-brands fa-js"></i>
+          <p>JavaScript</p>
+        </div>
 
+        <div class="tech">
+          <i class="fa-brands fa-html5"></i>
+          <p>HTML</p>
+        </div>
 
+        <div class="tech">
+          <i class="fa-brands fa-css3"></i>
+          <p>CSS</p>
+        </div>
 
-<section class="skills">
+        <div class="tech">
+          <i class="fa-solid fa-database"></i>
+          <p>MySQL</p>
+        </div>
+      </div>
+    </section>
 
-<h2>Habilidades</h2>
+    <section class="grafico">
+      <h2>Habilidades</h2>
 
-<div class="skill">
-<span>PHP / Laravel</span>
-<div class="barra">
-<div class="progresso" data-width="90%"></div>
-</div>
-</div>
+      <canvas id="skillsChart"></canvas>
+    </section>
 
-<div class="skill">
-<span>JavaScript</span>
-<div class="barra">
-<div class="progresso" data-width="75%"></div>
-</div>
-</div>
+    <section class="projetos">
+      <h2>Projetos</h2>
+      <div class="grid" id="github-projects">
+        <div class="card">
+          <div class="card-img">
+            <img src="img/logo.png" alt="Sistema de Combustível" />
+          </div>
+          <div class="card-content">
+            <h3>Sistema de Gestão de Combustível</h3>
+            <p>
+              Controle de stock e vendas com Laravel, relatórios em tempo real.
+            </p>
+            <div class="card-buttons">
+              <a href="https://app.4fenergy.co.mz/" target="_blank"
+                >Ver Projeto</a
+              >
+              <a
+                href="https://github.com/orneliomahingue/gestao-de-stock"
+                target="_blank"
+                >Código</a
+              >
+            </div>
+          </div>
+        </div>
 
-<div class="skill">
-<span>HTML / CSS</span>
-<div class="barra">
-<div class="progresso" data-width="85%"></div>
-</div>
-</div>
+        <div class="card">
+          <div class="card-img">
+            <img src="img/balanca.png" alt="Sistema Financeiro" />
+          </div>
+          <div class="card-content">
+            <h3>Sistema Electronico de Custas Judiciais</h3>
+            <p>
+              Gestão de receitas, despesas e relatórios financeiros detalhados.
+            </p>
+            <div class="card-buttons">
+              <a href="https://secj.ngrok.app/" target="_blank">Ver Projeto</a>
+              <a
+                href="https://github.com/TribunalSupremoMoz/SECJ"
+                target="_blank"
+                >Código</a
+              >
+            </div>
+          </div>
+        </div>
 
-<div class="skill">
-<span>MySQL</span>
-<div class="barra">
-<div class="progresso" data-width="80%"></div>
-</div>
-</div>
+        <div class="card">
+          <div class="card-img">
+            <img src="img/projeto3.jpg" alt="Sistema de Notificações" />
+          </div>
+          <div class="card-content">
+            <h3>Sistema de Notificações</h3>
+            <p>Envio de notificações automáticas para utentes do tribunal.</p>
+            <div class="card-buttons">
+              <a href="#" target="_blank">Ver Projeto</a>
+              <a
+                href="https://github.com/TribunalSupremoMoz/SMAJE_Quasar"
+                target="_blank"
+                >Código</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <!--  -->
+    <!-- <section class="projetos">
+      <h2>Projetos</h2>
 
+      <div class="grid">
+        <div class="card">
+          <h3>Sistema de Gestão de Combustível</h3>
 
+          <p>Controle de stock e vendas com Laravel.</p>
+        </div>
 
-<section id="projetos" class="projetos">
+        <div class="card">
+          <h3>Sistema Financeiro</h3>
 
-<h2>Projetos</h2>
+          <p>Gestão de receitas e despesas.</p>
+        </div>
 
-<div class="grid">
+        <div class="card">
+          <h3>Sistema de Notificações</h3>
 
-<div class="card">
-<h3>Sistema de Gestão de Combustível</h3>
-<p>Controle de stock e vendas com Laravel.</p>
-<button>Ver Projeto</button>
-</div>
+          <p>Envio de notificações para utentes do tribunal.</p>
+        </div>
+      </div>
+    </section> -->
 
-<div class="card">
-<h3>Sistema Financeiro</h3>
-<p>Gestão de receitas, despesas e relatórios.</p>
-<button>Ver Projeto</button>
-</div>
+    <footer>
+      <p>© 2026 | Ornelio Mahingue</p>
+    </footer>
 
-<div class="card">
-<h3>Sistema de Notificações</h3>
-<p>Envio de notificações para utentes do tribunal.</p>
-<button>Ver Projeto</button>
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 | Ornelio Mahingue</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  </body>
 </html>
