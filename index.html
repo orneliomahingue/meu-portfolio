@@ -2,194 +2,329 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ornelio Mahingue | Developer</title>
-
     <link rel="stylesheet" href="style.css" />
-
-    <!-- icones -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
 
   <body>
-    <nav class="navbar">
-      <div class="logo">Ornelio.dev</div>
 
-      <div class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="logo">Ornelio<span>.dev</span></a>
+
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
 
       <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="#contacto" class="nav-link cta-nav">Contacto</a></li>
       </ul>
     </nav>
 
+    <!-- ===== PARTICLES ===== -->
     <div id="particles-js"></div>
 
-    <header class="hero">
-      <img src="img/perfil.png" class="perfil" />
-      <h1>Ornelio Mahingue</h1>
-      <p>Desenvolvedor Web | PHP | Laravel | JavaScript</p>
-      <div class="botoes">
-        <a href="https://github.com/seuusuario" target="_blank">
-          <i class="fa-brands fa-github"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/seuusuario" target="_blank">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="cv.pdf" download>
-          <i class="fa-solid fa-download"></i> Baixar CV
-        </a>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge">Disponível para projetos</div>
+        <div class="perfil-wrap">
+          <img src="img/perfil.png" class="perfil" alt="Ornelio Mahingue" />
+          <div class="perfil-ring"></div>
+        </div>
+        <h1>Ornelio <span class="gradient-text">Mahingue</span></h1>
+        <p class="hero-sub">
+          <span class="typing-wrap"><span id="typing"></span><span class="cursor">|</span></span>
+        </p>
+        <div class="hero-btns">
+          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+          <a href="cv.pdf" download class="btn btn-outline">
+            <i class="fa-solid fa-download"></i> Baixar CV
+          </a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/orneliomahingue" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/orneliomahingue" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:ornelio@email.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
       </div>
-    </header>
+      <div class="scroll-indicator">
+        <div class="mouse"><div class="wheel"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
 
-    <section class="skills">
-      <h2>Tecnologias</h2>
-
-      <div class="tech-grid">
-        <div class="tech">
-          <i class="fa-brands fa-php"></i>
-          <p>PHP</p>
+    <!-- ===== SOBRE ===== -->
+    <section class="sobre" id="sobre">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Sobre mim</span>
+          <h2>Quem sou eu?</h2>
         </div>
-
-        <div class="tech">
-          <i class="fa-brands fa-laravel"></i>
-          <p>Laravel</p>
-        </div>
-
-        <div class="tech">
-          <i class="fa-brands fa-js"></i>
-          <p>JavaScript</p>
-        </div>
-
-        <div class="tech">
-          <i class="fa-brands fa-html5"></i>
-          <p>HTML</p>
-        </div>
-
-        <div class="tech">
-          <i class="fa-brands fa-css3"></i>
-          <p>CSS</p>
-        </div>
-
-        <div class="tech">
-          <i class="fa-solid fa-database"></i>
-          <p>MySQL</p>
+        <div class="sobre-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="sobre-text">
+            <p>Sou um <strong>Desenvolvedor Web Full-Stack</strong> apaixonado por criar soluções digitais eficientes e com experiências de utilizador excepcionais. Com foco em <strong>PHP/Laravel</strong> no backend e <strong>JavaScript</strong> no frontend, desenvolvo sistemas robustos e escaláveis.</p>
+            <p>Tenho experiência em projetos reais para o sector público e privado em Moçambique, incluindo sistemas de gestão financeira e judicial.</p>
+            <div class="stats-row">
+              <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Anos Exp.</span></div>
+              <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projetos</span></div>
+              <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Tecnologias</span></div>
+            </div>
+          </div>
+          <div class="sobre-card glass-card">
+            <div class="info-item"><i class="fa-solid fa-location-dot"></i> Maputo, Moçambique</div>
+            <div class="info-item"><i class="fa-solid fa-briefcase"></i> Full-Stack Developer</div>
+            <div class="info-item"><i class="fa-solid fa-graduation-cap"></i> Engenharia Informática</div>
+            <div class="info-item"><i class="fa-solid fa-circle status-online"></i> Disponível agora</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="grafico">
-      <h2>Habilidades</h2>
-
-      <canvas id="skillsChart"></canvas>
-    </section>
-
-    <section class="projetos">
-      <h2>Projetos</h2>
-      <div class="grid" id="github-projects">
-        <div class="card">
-          <div class="card-img">
-            <img src="img/logo.png" alt="Sistema de Combustível" />
-          </div>
-          <div class="card-content">
-            <h3>Sistema de Gestão de Combustível</h3>
-            <p>
-              Controle de stock e vendas com Laravel, relatórios em tempo real.
-            </p>
-            <div class="card-buttons">
-              <a href="https://app.4fenergy.co.mz/" target="_blank"
-                >Ver Projeto</a
-              >
-              <a
-                href="https://github.com/orneliomahingue/gestao-de-stock"
-                target="_blank"
-                >Código</a
-              >
-            </div>
-          </div>
+    <!-- ===== SKILLS ===== -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Competências</span>
+          <h2>Tecnologias & Skills</h2>
         </div>
 
-        <div class="card">
-          <div class="card-img">
-            <img src="img/balanca.png" alt="Sistema Financeiro" />
+        <div class="skills-layout">
+          <!-- Tech Icons -->
+          <div class="tech-grid" data-aos="fade-right" data-aos-delay="100">
+            <div class="tech"><i class="fa-brands fa-php"></i><p>PHP</p></div>
+            <div class="tech"><i class="fa-brands fa-laravel"></i><p>Laravel</p></div>
+            <div class="tech"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+            <div class="tech"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
+            <div class="tech"><i class="fa-brands fa-css3-alt"></i><p>CSS3</p></div>
+            <div class="tech"><i class="fa-solid fa-database"></i><p>MySQL</p></div>
+            <div class="tech"><i class="fa-brands fa-git-alt"></i><p>Git</p></div>
+            <div class="tech"><i class="fa-brands fa-vuejs"></i><p>Vue.js</p></div>
           </div>
-          <div class="card-content">
-            <h3>Sistema Electronico de Custas Judiciais</h3>
-            <p>
-              Gestão de receitas, despesas e relatórios financeiros detalhados.
-            </p>
-            <div class="card-buttons">
-              <a href="https://secj.ngrok.app/" target="_blank">Ver Projeto</a>
-              <a
-                href="https://github.com/TribunalSupremoMoz/SECJ"
-                target="_blank"
-                >Código</a
-              >
-            </div>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="card-img">
-            <img src="img/projeto3.jpg" alt="Sistema de Notificações" />
-          </div>
-          <div class="card-content">
-            <h3>Sistema de Notificações</h3>
-            <p>Envio de notificações automáticas para utentes do tribunal.</p>
-            <div class="card-buttons">
-              <a href="#" target="_blank">Ver Projeto</a>
-              <a
-                href="https://github.com/TribunalSupremoMoz/SMAJE_Quasar"
-                target="_blank"
-                >Código</a
-              >
+          <!-- Skill Bars -->
+          <div class="skill-bars" data-aos="fade-left" data-aos-delay="200">
+            <div class="skill-bar">
+              <div class="skill-info"><span>PHP</span><span>90%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info"><span>Laravel</span><span>85%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info"><span>JavaScript</span><span>75%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info"><span>HTML & CSS</span><span>85%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info"><span>MySQL</span><span>80%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info"><span>Git & GitHub</span><span>78%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="78"></div></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!--  -->
-    <!-- <section class="projetos">
-      <h2>Projetos</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Sistema de Gestão de Combustível</h3>
-
-          <p>Controle de stock e vendas com Laravel.</p>
+    <!-- ===== PROJETOS ===== -->
+    <section class="projetos" id="projetos">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Portfólio</span>
+          <h2>Projetos em Destaque</h2>
         </div>
 
-        <div class="card">
-          <h3>Sistema Financeiro</h3>
+        <div class="grid">
 
-          <p>Gestão de receitas e despesas.</p>
-        </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-img">
+              <img src="img/logo.png" alt="Sistema de Combustível" />
+              <div class="card-overlay">
+                <span class="tag">Laravel</span>
+                <span class="tag">MySQL</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Gestão de Combustível</h3>
+              <p>Controle de stock e vendas com Laravel, relatórios em tempo real e dashboards interativos.</p>
+              <div class="card-buttons">
+                <a href="https://app.4fenergy.co.mz/" target="_blank" rel="noopener" class="btn-card btn-live">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </a>
+                <a href="https://github.com/orneliomahingue/gestao-de-stock" target="_blank" rel="noopener" class="btn-card btn-code">
+                  <i class="fa-brands fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
 
-        <div class="card">
-          <h3>Sistema de Notificações</h3>
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-img">
+              <img src="img/balanca.png" alt="Sistema Judicial" />
+              <div class="card-overlay">
+                <span class="tag">PHP</span>
+                <span class="tag">Laravel</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Custas Judiciais (SECJ)</h3>
+              <p>Sistema eletrónico para gestão de receitas e despesas judiciais com relatórios detalhados.</p>
+              <div class="card-buttons">
+                <a href="https://secj.ngrok.app/" target="_blank" rel="noopener" class="btn-card btn-live">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </a>
+                <a href="https://github.com/TribunalSupremoMoz/SECJ" target="_blank" rel="noopener" class="btn-card btn-code">
+                  <i class="fa-brands fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
 
-          <p>Envio de notificações para utentes do tribunal.</p>
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-img">
+              <div class="card-img-placeholder">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+              <div class="card-overlay">
+                <span class="tag">Quasar</span>
+                <span class="tag">Vue.js</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Sistema de Notificações</h3>
+              <p>Envio de notificações automáticas para utentes do Tribunal Supremo de Moçambique.</p>
+              <div class="card-buttons">
+                <a href="#" class="btn-card btn-live disabled">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </a>
+                <a href="https://github.com/TribunalSupremoMoz/SMAJE_Quasar" target="_blank" rel="noopener" class="btn-card btn-code">
+                  <i class="fa-brands fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-img">
+              <div class="card-img-placeholder water-placeholder">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+              <div class="card-overlay">
+                <span class="tag">Laravel</span>
+                <span class="tag">Quasar</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Gestão e Abastecimento de Água</h3>
+              <p>Sistema completo para gestão e controlo de abastecimento de água, com backend em Laravel e interface moderna em Quasar/Vue.js.</p>
+              <div class="card-buttons">
+                <a href="#" class="btn-card btn-live disabled">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </a>
+                <a href="#" class="btn-card btn-code disabled">
+                  <i class="fa-brands fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </section> -->
+    </section>
 
+    <!-- ===== CONTACTO ===== -->
+    <section class="contacto" id="contacto">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Contacto</span>
+          <h2>Vamos trabalhar juntos?</h2>
+          <p class="section-desc">Tem um projeto em mente? Entre em contacto — responderei em breve.</p>
+        </div>
+
+        <div class="contacto-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="contacto-info">
+            <div class="contact-item glass-card">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span>Email</span>
+                <a href="mailto:ornelio@email.com">ornelio@email.com</a>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <i class="fa-brands fa-github"></i>
+              <div>
+                <span>GitHub</span>
+                <a href="https://github.com/orneliomahingue" target="_blank" rel="noopener">github.com/orneliomahingue</a>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <i class="fa-brands fa-linkedin"></i>
+              <div>
+                <span>LinkedIn</span>
+                <a href="https://linkedin.com/in/orneliomahingue" target="_blank" rel="noopener">linkedin.com/in/orneliomahingue</a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="O seu nome" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva o seu projeto..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
-      <p>© 2026 | Ornelio Mahingue</p>
+      <div class="container">
+        <div class="footer-inner">
+          <a href="#hero" class="logo">Ornelio<span>.dev</span></a>
+          <p>© 2026 Ornelio Mahingue — Feito com <i class="fa-solid fa-heart" style="color:#f43f5e"></i> em Maputo</p>
+          <div class="footer-socials">
+            <a href="https://github.com/orneliomahingue" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/orneliomahingue" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Back to top -->
+    <button class="back-top" id="backTop" aria-label="Voltar ao topo">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
