@@ -90,6 +90,7 @@ menu.querySelectorAll('.nav-link').forEach(link => {
    TYPING EFFECT
    ============================================= */
 const phrases = [
+  'Analista de Sistemas',
   'Desenvolvedor Web',
   'Quasar & PHP & Laravel',
   'Construtor de soluções digitais'
