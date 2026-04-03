@@ -90,9 +90,8 @@ menu.querySelectorAll('.nav-link').forEach(link => {
    TYPING EFFECT
    ============================================= */
 const phrases = [
-  'Full-Stack Developer',
-  'PHP & Laravel Expert',
-  'JavaScript Enthusiast',
+  'Desenvolvedor Web',
+  'Quasar & PHP & Laravel',
   'Construtor de soluções digitais'
 ];
 
